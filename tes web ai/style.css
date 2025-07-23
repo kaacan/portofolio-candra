@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f2f2f2;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.about, .projects {
+  margin: 40px 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.photo-wrapper {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* untuk Safari */
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* efek glass tipis */
+  display: inline-block;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+
+
+/* Teks yang tersembunyi */
+.photo-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Teks muncul saat hover */
+.photo-container:hover .photo-text {
+  opacity: 1;
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.main-photo {
+  width: 250px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.main-photo:hover {
+  transform: scale(1.05);
+}
+
+.photo-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-container {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slide:hover .caption {
+  opacity: 1;
+}
+
+.nav-btn {
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  user-select: none;
+}
+img {
+  border-radius: 15px;
+  transition: all 0.4s ease; /* aktifkan animasi saat berubah */
+}
+
+img:hover {
+  filter: brightness(0.85);   /* efek gelap */
+  transform: scale(1.05);     /* memperbesar sedikit */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* bayangan */
+}
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ffffff, #989594, #585458, #040004);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.nav-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.slider-container {
+  width: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin: 0 20px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.carousel-image {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+}
+
+.caption {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Tampilkan caption saat hover gambar */
+.slide:hover .caption {
+  opacity: 1;
+}
+
+
+.back-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+}
